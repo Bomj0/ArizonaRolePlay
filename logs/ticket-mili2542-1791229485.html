@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лог тикета — #ticket-mili2542</title>
+    <style>
+        * { box-sizing: border-box; }
+        body {
+            background-color: #0f0f15;
+            color: #dbdee1;
+            font-family: 'gg sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 24px;
+        }
+        .header {
+            background: linear-gradient(135deg, #1f1b2e, #281d42);
+            padding: 24px;
+            border-radius: 12px;
+            margin-bottom: 24px;
+            border: 1px solid #3d2b63;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+        }
+        h1 {
+            margin: 0 0 12px 0;
+            font-size: 24px;
+            color: #a58aff;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 12px;
+            margin-top: 16px;
+            font-size: 14px;
+            color: #8e88ab;
+        }
+        .info-card {
+            background: rgba(0, 0, 0, 0.25);
+            padding: 10px 14px;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .info-card b { color: #ffffff; }
+        
+        .chat-container {
+            background-color: #16151f;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+            border: 1px solid #201d2d;
+        }
+        .message-row {
+            display: flex;
+            gap: 16px;
+            padding: 12px 0;
+            border-bottom: 1px solid #201d2d;
+        }
+        .message-row:last-child { border-bottom: none; }
+        .avatar-col { flex-shrink: 0; }
+        .avatar { width: 42px; height: 42px; border-radius: 50%; }
+        .content-col { flex-grow: 1; }
+        
+        .meta {
+            display: flex;
+            align-items: baseline;
+            gap: 8px;
+            margin-bottom: 4px;
+        }
+        .author-name { font-weight: 600; color: #ffffff; font-size: 15px; }
+        .author-tag { font-size: 12px; color: #6c6585; }
+        .timestamp { font-size: 12px; color: #8e88ab; margin-left: auto; }
+        
+        .msg-text {
+            color: #dcddde;
+            font-size: 14px;
+            line-height: 1.5;
+            word-break: break-word;
+        }
+        .attachment-box { margin-top: 8px; }
+        .img-attach {
+            max-width: 400px;
+            max-height: 300px;
+            border-radius: 8px;
+            border: 1px solid #3d2b63;
+        }
+        .file-box {
+            margin-top: 6px;
+            background-color: #1a1726;
+            padding: 8px 12px;
+            border-radius: 6px;
+            display: inline-block;
+            font-size: 13px;
+        }
+        .file-link { color: #8a63ff; text-decoration: none; font-weight: 500; }
+        .file-link:hover { text-decoration: underline; }
+        .file-size { color: #6c6585; font-size: 11px; }
+        
+        .embed-box {
+            background-color: #1a1726;
+            border-left: 4px solid #8a63ff;
+            padding: 12px;
+            border-radius: 6px;
+            margin-top: 8px;
+            max-width: 550px;
+        }
+        .embed-title { font-weight: 700; color: #ffffff; font-size: 15px; margin-bottom: 6px; }
+        .embed-desc { font-size: 13px; color: #dbdee1; margin-bottom: 8px; }
+        .embed-field { margin-top: 6px; }
+        .field-name { font-size: 12px; font-weight: 600; color: #8e88ab; text-transform: uppercase; }
+        .field-value {
+            background-color: #110e1a;
+            padding: 8px;
+            border-radius: 4px;
+            font-family: 'Consolas', monospace;
+            font-size: 12px;
+            white-space: pre-wrap;
+            margin: 4px 0 0 0;
+            color: #d1d0db;
+        }
+        
+        .footer-note {
+            text-align: center;
+            margin-top: 24px;
+            font-size: 12px;
+            color: #6c6585;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>📋 Лог тикета: #ticket-mili2542</h1>
+        <div class="info-grid">
+            <div class="info-card"><b>Сервер:</b> Arizona Role Play</div>
+            <div class="info-card"><b>Закрыл:</b> mili2542 (ID: 802675319361765406)</div>
+            <div class="info-card"><b>Вердикт администрации:</b> тест</div>
+            <div class="info-card"><b>Всего сообщений:</b> 2</div>
+            <div class="info-card"><b>Дата закрытия:</b> 05.10.2026 в 19:44:45 UTC</div>
+        </div>
+    </div>
+    <div class="chat-container">
+        
+        <div class="message-row">
+            <div class="avatar-col">
+                <img src="https://cdn.discordapp.com/avatars/1548823937650004048/738d905206ec9a8b2f202069605874e6.png?size=1024" class="avatar" alt="avatar">
+            </div>
+            <div class="content-col">
+                <div class="meta">
+                    <span class="author-name">Arizona Role Play Тикеты</span>
+                    <span class="author-tag">(Arizona Role Play Тикеты#4527)</span>
+                    <span class="timestamp">05.10.2026 19:44:16</span>
+                </div>
+                <div class="msg-text">&lt;@802675319361765406&gt; &lt;@&amp;1548994655100870656&gt;</div>
+                
+                <div class="embed-box"><div class="embed-title">Заявка: ❓ Другой вопрос</div><div class="embed-desc">Здравствуйте, &lt;@802675319361765406&gt;! Ваша анкета принята.<br>Ожидайте ответа от администрации сервера.</div><div class="embed-field"><div class="field-name">📌 Ваш SteamID / Ник</div><pre class="field-value">```
+11 111
+```</pre></div><div class="embed-field"><div class="field-name">📌 Тема обращения</div><pre class="field-value">```
+111
+```</pre></div><div class="embed-field"><div class="field-name">📌 Описание</div><pre class="field-value">```
+111
+```</pre></div><div class="embed-field"><div class="field-name">📌 Доп. материалы</div><pre class="field-value">```
+111
+```</pre></div><div class="embed-field"><div class="field-name">Статус</div><pre class="field-value">🟡 В процессе решения</pre></div><div class="embed-field"><div class="field-name">Ответственный</div><pre class="field-value">&lt;@802675319361765406&gt;</pre></div></div>
+            </div>
+        </div>
+        
+        <div class="message-row">
+            <div class="avatar-col">
+                <img src="https://cdn.discordapp.com/avatars/1548823937650004048/738d905206ec9a8b2f202069605874e6.png?size=1024" class="avatar" alt="avatar">
+            </div>
+            <div class="content-col">
+                <div class="meta">
+                    <span class="author-name">Arizona Role Play Тикеты</span>
+                    <span class="author-tag">(Arizona Role Play Тикеты#4527)</span>
+                    <span class="timestamp">05.10.2026 19:44:30</span>
+                </div>
+                <div class="msg-text">📌 Модератор &lt;@802675319361765406&gt; взял данный тикет в работу!</div>
+                
+                
+            </div>
+        </div>
+        
+    </div>
+    <div class="footer-note">
+        Сгенерировано ботом системы поддержки | GitHub Pages Archives
+    </div>
+</body>
+</html>
