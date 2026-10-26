@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лог тикета — #ticket-faust0986</title>
+    <style>
+        * { box-sizing: border-box; }
+        body {
+            background-color: #0f0f15;
+            color: #dbdee1;
+            font-family: 'gg sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 24px;
+        }
+        .header {
+            background: linear-gradient(135deg, #1f1b2e, #281d42);
+            padding: 24px;
+            border-radius: 12px;
+            margin-bottom: 24px;
+            border: 1px solid #3d2b63;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+        }
+        h1 {
+            margin: 0 0 12px 0;
+            font-size: 24px;
+            color: #a58aff;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 12px;
+            margin-top: 16px;
+            font-size: 14px;
+            color: #8e88ab;
+        }
+        .info-card {
+            background: rgba(0, 0, 0, 0.25);
+            padding: 10px 14px;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .info-card b { color: #ffffff; }
+        
+        .chat-container {
+            background-color: #16151f;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+            border: 1px solid #201d2d;
+        }
+        .message-row {
+            display: flex;
+            gap: 16px;
+            padding: 12px 0;
+            border-bottom: 1px solid #201d2d;
+        }
+        .message-row:last-child { border-bottom: none; }
+        .avatar-col { flex-shrink: 0; }
+        .avatar { width: 42px; height: 42px; border-radius: 50%; }
+        .content-col { flex-grow: 1; }
+        
+        .meta {
+            display: flex;
+            align-items: baseline;
+            gap: 8px;
+            margin-bottom: 4px;
+        }
+        .author-name { font-weight: 600; color: #ffffff; font-size: 15px; }
+        .author-tag { font-size: 12px; color: #6c6585; }
+        .timestamp { font-size: 12px; color: #8e88ab; margin-left: auto; }
+        
+        .msg-text {
+            color: #dcddde;
+            font-size: 14px;
+            line-height: 1.5;
+            word-break: break-word;
+        }
+        .attachment-box { margin-top: 8px; }
+        .img-attach {
+            max-width: 400px;
+            max-height: 300px;
+            border-radius: 8px;
+            border: 1px solid #3d2b63;
+        }
+        .file-box {
+            margin-top: 6px;
+            background-color: #1a1726;
+            padding: 8px 12px;
+            border-radius: 6px;
+            display: inline-block;
+            font-size: 13px;
+        }
+        .file-link { color: #8a63ff; text-decoration: none; font-weight: 500; }
+        .file-link:hover { text-decoration: underline; }
+        .file-size { color: #6c6585; font-size: 11px; }
+        
+        .embed-box {
+            background-color: #1a1726;
+            border-left: 4px solid #8a63ff;
+            padding: 12px;
+            border-radius: 6px;
+            margin-top: 8px;
+            max-width: 550px;
+        }
+        .embed-title { font-weight: 700; color: #ffffff; font-size: 15px; margin-bottom: 6px; }
+        .embed-desc { font-size: 13px; color: #dbdee1; margin-bottom: 8px; }
+        .embed-field { margin-top: 6px; }
+        .field-name { font-size: 12px; font-weight: 600; color: #8e88ab; text-transform: uppercase; }
+        .field-value {
+            background-color: #110e1a;
+            padding: 8px;
+            border-radius: 4px;
+            font-family: 'Consolas', monospace;
+            font-size: 12px;
+            white-space: pre-wrap;
+            margin: 4px 0 0 0;
+            color: #d1d0db;
+        }
+        
+        .footer-note {
+            text-align: center;
+            margin-top: 24px;
+            font-size: 12px;
+            color: #6c6585;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>📋 Лог тикета: #ticket-faust0986</h1>
+        <div class="info-grid">
+            <div class="info-card"><b>Сервер:</b> Arizona Role Play</div>
+            <div class="info-card"><b>Закрыл:</b> fasahka (ID: 506779149063684097)</div>
+            <div class="info-card"><b>Вердикт администрации:</b> фикс</div>
+            <div class="info-card"><b>Всего сообщений:</b> 20</div>
+            <div class="info-card"><b>Дата закрытия:</b> 26.10.2026 в 16:06:45 UTC</div>
+        </div>
+    </div>
+    <div class="chat-container">
+        
+        <div class="message-row">
+            <div class="avatar-col">
+                <img src="https://cdn.discordapp.com/avatars/1548823937650004048/738d905206ec9a8b2f202069605874e6.png?size=1024" class="avatar" alt="avatar">
+            </div>
+            <div class="content-col">
+                <div class="meta">
+                    <span class="author-name">Arizona Role Play Тикеты</span>
+                    <span class="author-tag">(Arizona Role Play Тикеты#4527)</span>
+                    <span class="timestamp">26.10.2026 02:06:28</span>
+                </div>
+                <div class="msg-text">&lt;@1031810921863069766&gt; &lt;@&amp;1548994655100870656&gt;</div>
+                
+                <div class="embed-box"><div class="embed-title">Заявка: 🛠️ Техническая поддержка</div><div class="embed-desc">Здравствуйте, &lt;@1031810921863069766&gt;! Ваша анкета принята.<br>Ожидайте ответа от администрации сервера.</div><div class="embed-field"><div class="field-name">📌 Ваш SteamID / Ник</div><pre class="field-value">```
+FaUsT
+```</pre></div><div class="embed-field"><div class="field-name">📌 Описание проблемы</div><pre class="field-value">```
+GPS-Метки на карте + неправильные названия у некоторых точек
+```</pre></div><div class="embed-field"><div class="field-name">📌 Когда появилась</div><pre class="field-value">```
+При  выборе gps
+```</pre></div><div class="embed-field"><div class="field-name">📌 Что пробовали / Скриншоты</div><pre class="field-value">```
+Не указано
+```</pre></div><div class="embed-field"><div class="field-name">Статус</div><pre class="field-value">🟡 В процессе решения</pre></div><div class="embed-field"><div class="field-name">Ответственный</div><pre class="field-value">&lt;@1204031117347528756&gt;</pre></div></div>
+            </div>
+        </div>
+        
+        <div class="message-row">
+            <div class="avatar-col">
+                <img src="https://cdn.discordapp.com/avatars/1031810921863069766/82018c51490a3b24e05c8514fe338328.png?size=1024" class="avatar" alt="avatar">
+            </div>
+            <div class="content-col">
+                <div class="meta">
+                    <span class="author-name">𝔉𝔞𝔘𝔰𝔗</span>
+                    <span class="author-tag">(faust0986)</span>
+                    <span class="timestamp">26.10.2026 02:06:53</span>
+                </div>
+                
+                <div class="attachment-box"><a href="https://cdn.discordapp.com/attachments/1564097853565964331/1564097962173530213/image.png?ex=6ae0affd&is=6adf5e7d&hm=f6bed241b9184ca4581b39f81d3b58aa832cea0ff21540dec1857a1c06515fba&" target="_blank"><img src="https://cdn.discordapp.com/attachments/1564097853565964331/1564097962173530213/image.png?ex=6ae0affd&is=6adf5e7d&hm=f6bed241b9184ca4581b39f81d3b58aa832cea0ff21540dec1857a1c06515fba&" class="img-attach" alt="attachment"></a></div>
+                
+            </div>
+        </div>
+        
+        <div class="message-row">
+            <div class="avatar-col">
+                <img src="https://cdn.discordapp.com/avatars/1031810921863069766/82018c51490a3b24e05c8514fe338328.png?size=1024" class="avatar" alt="avatar">
+            </div>
+            <div class="content-col">
+                <div class="meta">
+                    <span class="author-name">𝔉𝔞𝔘𝔰𝔗</span>
+                    <span class="author-tag">(faust0986)</span>
+                    <span class="timestamp">26.10.2026 02:32:45</span>
+                </div>
+                <div class="msg-text">+</div>
+                
+                
+            </div>
+        </div>
+        
+        <div class="message-row">
+            <div class="avatar-col">
+                <img src="https://cdn.discordapp.com/avatars/1031810921863069766/82018c51490a3b24e05c8514fe338328.png?size=1024" class="avatar" alt="avatar">
+            </div>
+            <div class="content-col">
+                <div class="meta">
+                    <span class="author-name">𝔉𝔞𝔘𝔰𝔗</span>
+                    <span class="author-tag">(faust0986)</span>
+                    <span class="timestamp">26.10.2026 02:32:59</span>
+                </div>
+                <div class="msg-text">[pcasino] addons/pcasino/lua/entities/pcasino_slot_machine/cl_init.lua:51: attempt to index field &#x27;bet&#x27; (a nil value)<br>  1. unknown - addons/pcasino/lua/entities/pcasino_slot_machine/cl_init.lua:51 (x1366)</div>
+                <div class="attachment-box"><a href="https://cdn.discordapp.com/attachments/1564097853565964331/1564104527303540766/image.png?ex=6ae0b61a&is=6adf649a&hm=cb41266ce4f328f52421c569c237138994b737d4160038b4b888b38e3ac25b72&" target="_blank"><img src="https://cdn.discordapp.com/attachments/1564097853565964331/1564104527303540766/image.png?ex=6ae0b61a&is=6adf649a&hm=cb41266ce4f328f52421c569c237138994b737d4160038b4b888b38e3ac25b72&" class="img-attach" alt="attachment"></a></div>
+                
+            </div>
+        </div>
+        
+        <div class="message-row">
+            <div class="avatar-col">
+                <img src="https://cdn.discordapp.com/avatars/1031810921863069766/82018c51490a3b24e05c8514fe338328.png?size=1024" class="avatar" alt="avatar">
+            </div>
+            <div class="content-col">
+                <div class="meta">
+                    <span class="author-name">𝔉𝔞𝔘𝔰𝔗</span>
+                    <span class="author-tag">(faust0986)</span>
+                    <span class="timestamp">26.10.2026 02:34:20</span>
+                </div>
+                <div class="msg-text">+<br>(мб только у меня)</div>
+                <div class="attachment-box"><a href="https://cdn.discordapp.com/attachments/1564097853565964331/1564104866983448647/image.png?ex=6ae0b66b&is=6adf64eb&hm=a15447a4b6620ac492ae9a8290960b4891ef2fc77530a53f07b69aa5ee0376fe&" target="_blank"><img src="https://cdn.discordapp.com/attachments/1564097853565964331/1564104866983448647/image.png?ex=6ae0b66b&is=6adf64eb&hm=a15447a4b6620ac492ae9a8290960b4891ef2fc77530a53f07b69aa5ee0376fe&" class="img-attach" alt="attachment"></a></div>
+                
+            </div>
+        </div>
+        
+        <div class="message-row">
+            <div class="avatar-col">
+                <img src="https://cdn.discordapp.com/avatars/1548823937650004048/738d905206ec9a8b2f202069605874e6.png?size=1024" class="avatar" alt="avatar">
+            </div>
+            <div class="content-col">
+                <div class="meta">
+                    <span class="author-name">Arizona Role Play Тикеты</span>
+                    <span class="author-tag">(Arizona Role Play Тикеты#4527)</span>
+                    <span class="timestamp">26.10.2026 04:34:26</span>
+                </div>
+                <div class="msg-text">📌 Модератор &lt;@1204031117347528756&gt; взял данный тикет в работу!</div>
+                
+                
+            </div>
+        </div>
+        
+        <div class="message-row">
+            <div class="avatar-col">
+                <img src="https://cdn.discordapp.com/avatars/1204031117347528756/4db1363bcd9a593f04fa804a2eb0a2c3.png?size=1024" class="avatar" alt="avatar">
+            </div>
+            <div class="content-col">
+                <div class="meta">
+                    <span class="author-name">gero</span>
+                    <span class="author-tag">(geroframe)</span>
+                    <span class="timestamp">26.10.2026 04:34:33</span>
+                </div>
+                <div class="msg-text">css скачен?</div>
+                
+                
+            </div>
+        </div>
+        
+        <div class="message-row">
+            <div class="avatar-col">
+                <img src="https://cdn.discordapp.com/avatars/1031810921863069766/82018c51490a3b24e05c8514fe338328.png?size=1024" class="avatar" alt="avatar">
+            </div>
+            <div class="content-col">
+                <div class="meta">
+                    <span class="author-name">𝔉𝔞𝔘𝔰𝔗</span>
+                    <span class="author-tag">(faust0986)</span>
+                    <span class="timestamp">26.10.2026 04:40:28</span>
+                </div>
+                <div class="msg-text">да</div>
+                
+                
+            </div>
+        </div>
+        
+        <div class="message-row">
+            <div class="avatar-col">
+                <img src="https://cdn.discordapp.com/avatars/1204031117347528756/4db1363bcd9a593f04fa804a2eb0a2c3.png?size=1024" class="avatar" alt="avatar">
+            </div>
+            <div class="content-col">
+                <div class="meta">
+                    <span class="author-name">gero</span>
+                    <span class="author-tag">(geroframe)</span>
+                    <span class="timestamp">26.10.2026 04:57:54</span>
+                </div>
+                <div class="msg-text">а ты точно не цыган и не украл землю?</div>
+                
+                
+            </div>
+        </div>
+        
+        <div class="message-row">
+            <div class="avatar-col">
+                <img src="https://cdn.discordapp.com/avatars/1031810921863069766/82018c51490a3b24e05c8514fe338328.png?size=1024" class="avatar" alt="avatar">
+            </div>
+            <div class="content-col">
+                <div class="meta">
+                    <span class="author-name">𝔉𝔞𝔘𝔰𝔗</span>
+                    <span class="author-tag">(faust0986)</span>
+                    <span class="timestamp">26.10.2026 05:51:07</span>
+                </div>
+                <div class="msg-text">https://cdn.discordapp.com/attachments/1037001539241377866/1564060505994432632/7f761dc8e47cc64d00c7344a538c14d2.gif</div>
+                
+                <div class="embed-box"></div>
+            </div>
+        </div>
+        
+        <div class="message-row">
+            <div class="avatar-col">
+                <img src="https://cdn.discordapp.com/avatars/802675319361765406/39ed6d6a75012972ea249857c3ffd01b.png?size=1024" class="avatar" alt="avatar">
+            </div>
+            <div class="content-col">
+                <div class="meta">
+                    <span class="author-name">Bomj</span>
+                    <span class="author-tag">(mili2542)</span>
+                    <span class="timestamp">26.10.2026 06:27:42</span>
+                </div>
+                <div class="msg-text">Сто пудов уже продал где-то землю а точнее снег</div>
+                
+                
+            </div>
+        </div>
+        
+        <div class="message-row">
+            <div class="avatar-col">
+                <img src="https://cdn.discordapp.com/avatars/1133822095126712361/a12a1e22f59657cf74043fa99f56c9b8.png?size=1024" class="avatar" alt="avatar">
+            </div>
+            <div class="content-col">
+                <div class="meta">
+                    <span class="author-name">𝓂𝓇. 𝓈𝒶𝓃𝓈ℯ𝓎 ♡</span>
+                    <span class="author-tag">(mr__sansey)</span>
+                    <span class="timestamp">26.10.2026 07:18:42</span>
+                </div>
+                <div class="msg-text">Пиздец, докатились</div>
+                
+                
+            </div>
+        </div>
+        
+        <div class="message-row">
+            <div class="avatar-col">
+                <img src="https://cdn.discordapp.com/avatars/886334100041003008/22b2c38538346b6bf4f25c3175402100.png?size=1024" class="avatar" alt="avatar">
+            </div>
+            <div class="content-col">
+                <div class="meta">
+                    <span class="author-name">[H]꧁Лунтик꧂</span>
+                    <span class="author-tag">(dark_soull1)</span>
+                    <span class="timestamp">26.10.2026 07:33:29</span>
+                </div>
+                <div class="msg-text">Цыгане -  тоже люди</div>
+                
+                
+            </div>
+        </div>
+        
+        <div class="message-row">
+            <div class="avatar-col">
+                <img src="https://cdn.discordapp.com/avatars/506779149063684097/a_6369f731495666528f46df57e4cfc537.gif?size=1024" class="avatar" alt="avatar">
+            </div>
+            <div class="content-col">
+                <div class="meta">
+                    <span class="author-name">фасашка</span>
+                    <span class="author-tag">(fasahka)</span>
+                    <span class="timestamp">26.10.2026 10:40:09</span>
+                </div>
+                <div class="msg-text">&lt;@1031810921863069766&gt; щас нормально?&gt;</div>
+                
+                
+            </div>
+        </div>
+        
+        <div class="message-row">
+            <div class="avatar-col">
+                <img src="https://cdn.discordapp.com/avatars/1031810921863069766/82018c51490a3b24e05c8514fe338328.png?size=1024" class="avatar" alt="avatar">
+            </div>
+            <div class="content-col">
+                <div class="meta">
+                    <span class="author-name">𝔉𝔞𝔘𝔰𝔗</span>
+                    <span class="author-tag">(faust0986)</span>
+                    <span class="timestamp">26.10.2026 10:40:55</span>
+                </div>
+                <div class="msg-text">Я без света</div>
+                
+                
+            </div>
+        </div>
+        
+        <div class="message-row">
+            <div class="avatar-col">
+                <img src="https://cdn.discordapp.com/avatars/1031810921863069766/82018c51490a3b24e05c8514fe338328.png?size=1024" class="avatar" alt="avatar">
+            </div>
+            <div class="content-col">
+                <div class="meta">
+                    <span class="author-name">𝔉𝔞𝔘𝔰𝔗</span>
+                    <span class="author-tag">(faust0986)</span>
+                    <span class="timestamp">26.10.2026 10:41:03</span>
+                </div>
+                <div class="msg-text">&lt;@1133822095126712361&gt;</div>
+                
+                
+            </div>
+        </div>
+        
+        <div class="message-row">
+            <div class="avatar-col">
+                <img src="https://cdn.discordapp.com/avatars/1133822095126712361/a12a1e22f59657cf74043fa99f56c9b8.png?size=1024" class="avatar" alt="avatar">
+            </div>
+            <div class="content-col">
+                <div class="meta">
+                    <span class="author-name">𝓂𝓇. 𝓈𝒶𝓃𝓈ℯ𝓎 ♡</span>
+                    <span class="author-tag">(mr__sansey)</span>
+                    <span class="timestamp">26.10.2026 10:41:27</span>
+                </div>
+                <div class="msg-text">где ты казик нашел</div>
+                
+                
+            </div>
+        </div>
+        
+        <div class="message-row">
+            <div class="avatar-col">
+                <img src="https://cdn.discordapp.com/avatars/1031810921863069766/82018c51490a3b24e05c8514fe338328.png?size=1024" class="avatar" alt="avatar">
+            </div>
+            <div class="content-col">
+                <div class="meta">
+                    <span class="author-name">𝔉𝔞𝔘𝔰𝔗</span>
+                    <span class="author-tag">(faust0986)</span>
+                    <span class="timestamp">26.10.2026 10:41:40</span>
+                </div>
+                <div class="msg-text">Заходил за битмайнера и покупал</div>
+                
+                
+            </div>
+        </div>
+        
+        <div class="message-row">
+            <div class="avatar-col">
+                <img src="https://cdn.discordapp.com/avatars/1204031117347528756/4db1363bcd9a593f04fa804a2eb0a2c3.png?size=1024" class="avatar" alt="avatar">
+            </div>
+            <div class="content-col">
+                <div class="meta">
+                    <span class="author-name">gero</span>
+                    <span class="author-tag">(geroframe)</span>
+                    <span class="timestamp">26.10.2026 12:10:38</span>
+                </div>
+                <div class="msg-text">&lt;@1031810921863069766&gt; администратор понесет наказание за свой проступок</div>
+                
+                
+            </div>
+        </div>
+        
+        <div class="message-row">
+            <div class="avatar-col">
+                <img src="https://cdn.discordapp.com/avatars/1133822095126712361/a12a1e22f59657cf74043fa99f56c9b8.png?size=1024" class="avatar" alt="avatar">
+            </div>
+            <div class="content-col">
+                <div class="meta">
+                    <span class="author-name">𝓂𝓇. 𝓈𝒶𝓃𝓈ℯ𝓎 ♡</span>
+                    <span class="author-tag">(mr__sansey)</span>
+                    <span class="timestamp">26.10.2026 12:24:00</span>
+                </div>
+                <div class="msg-text">&lt;@1031810921863069766&gt; вы получите варн по решению кп <br>Решение дал: &lt;@1031810921863069766&gt;</div>
+                
+                
+            </div>
+        </div>
+        
+    </div>
+    <div class="footer-note">
+        Сгенерировано ботом системы поддержки | GitHub Pages Archives
+    </div>
+</body>
+</html>
